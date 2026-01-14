@@ -18,10 +18,13 @@ let selectElem = document.getElementById('webdevlist');
 selectElem.addEventListener('change', function(){
     let codeValue = selectElem.value;
     console.log(codeValue);
+    
     document.querySelector('#html').style.color = 'red';
+
+    document.getElementById(codeValue)
 })
 
 
 const newPara = document.createElement('p');
-newPara.innetText = 'Added with Javascript';
+newPara.innertText = 'Added with Javascript';
 document.body.appendChild(newPara);
