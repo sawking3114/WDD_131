@@ -6,7 +6,7 @@ body {
 header h1 {
     margin-top: 40px;
 }
-header p {
+#blue {
     color: rgb(0, 119, 255);
     margin-bottom: -5px;
 }
@@ -24,7 +24,7 @@ ol {
 li {
     margin-bottom: 10px;
 }
-img {
+#logo {
     max-width: 15%;
     margin-top: 50px;
 }
