@@ -1,0 +1,104 @@
+
+/* form-demo.css */
+body {
+  font-size: 1.2em;
+}
+form {
+  width: 50%;
+  margin: 0 auto;
+  display: grid;
+}
+h1 {
+  text-align: center;
+}
+#grid {
+    display: grid;
+    position: relative;
+}
+#front, #back {
+    grid-area: 1/1;
+}
+#front {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: lightgrey;
+    border: 0px solid white;
+    border-radius: 4px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.55);
+    padding: 10px;
+    width: 75%;
+    z-index: 2;
+    justify-self: start;
+    align-self: start;
+}
+#back {
+    display: grid;
+    grid-template-columns: 3fr 0.7fr;
+    grid-template-rows: 1fr 0.7fr 1fr;
+    background-color: lightgrey;
+    border: 0px solid white;
+    border-radius: 4px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.55);
+    padding: 10px;
+    justify-self: end;
+    align-self: start;
+    margin-top: 40px;
+}
+#CVCContainer {
+    grid-column: 2;
+    grid-row: 3;
+}
+h2 {
+    text-align: right;
+}
+#dateHolder input{
+    display: inline-block;
+    width: 30%;
+}
+h5 {
+    align-self: center;
+    font-weight: normal;
+}
+p, h5, h2 {
+    margin: 0;
+}
+#cardHolderContainer {
+    grid-row: 3;
+}
+#dateHolder {
+    grid-row: 3;
+    grid-column: 2;
+    margin-left: 5px;
+}
+label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc; /* Add a border to make it visually consistent */
+    border-radius: 4px;
+  }
+  button {
+    background-color: #ccc;
+    color: black;
+    padding: 10px 15px;
+    border: solid 2px black;
+    border-radius: 7px;
+    box-shadow: 3px 3px 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    justify-self: end;
+  }
+  .errors {
+    white-space: pre-line; /*needed for 2 errors to be on separate lines*/
+    color: red;
+  }
+          
