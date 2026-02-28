@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Character Card">
+    <meta property="og:description" content="A character card with some buttons">
+    <meta name="twitter:title" content="Character Card">
+    <meta name="twitter:description" content="A character card with some buttons">
+    <title>Card</title>
+    <link rel="stylesheet" href="card.css">
+    <script src="card.js" defer></script>
+</head>
+<body>
+    <div class="card">
+        <img alt="A Snortleblat" class="image">
+        <div class="name"></div>
+        <div class="stats">
+            <p class="class"></p>
+            <p class="level"></p>
+            <p class="health"></p>
+        </div>
+        <div class="buttons">
+            <button id="attack" onclick="character.attacked()">Attacked</button>
+            <button id="level" onclick ="character.levelUp()">Level Up</button>
+        </div>
+    </div>
+</body>
+</html>
