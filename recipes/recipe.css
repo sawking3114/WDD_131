@@ -1,0 +1,127 @@
+header {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#book {
+    max-width: 30%;
+}
+
+header h1 {
+    font-size: 270%;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    border: 2px solid #888;
+    border-radius: 6px;
+    width: 350px;
+    overflow: hidden;
+}
+.search input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+    border-right: 1px solid #888;
+}
+.search img {
+    max-width: 30px;
+    border: none;
+    padding: 3px 3px;
+    cursor: pointer;
+}
+hr {
+    max-width: 90%;
+}
+main {
+    border: 2px solid #888;
+    border-radius: 6px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+}
+#crisp {
+    max-width: 95%;
+    align-self: center;
+}
+button {
+    margin: 3px 0 0 10px;
+}
+h2 {
+    color: rgb(36, 131, 255);
+    margin-bottom: 0;
+}
+p {
+    display: none;
+}
+
+footer {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.social {
+    display: flex;
+    flex-direction: row;
+    margin: 15px 0 10px 0;
+    gap: 3px;
+}
+.social a {
+    width: 25px;
+}
+
+@media screen and (min-width: 700px){
+    #book {
+        max-width: 15%;
+    }
+    .search {
+        width: 80%;
+    }
+    main {
+        max-width: 80%;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    button {
+        margin: 0 0 0 5px;
+        align-self: flex-start;
+        font-size: 20px;
+    }
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+    }
+    #crisp {
+        max-width: 45%;
+        padding: 10px;
+    }
+    p {
+        display: inline;
+    }
+    footer {
+        flex-direction: row;
+        justify-content: center;
+        margin: 10px 0 10px 0;
+    }
+    .link {
+        margin-right: 55%;
+    }
+    .social a {
+        width: 30px;
+    }
+}
