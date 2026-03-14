@@ -20,7 +20,7 @@ header h1 {
     font-size: 270%;
 }
 
-.search {
+.find {
     display: flex;
     align-items: center;
     border: 2px solid #888;
@@ -28,7 +28,7 @@ header h1 {
     width: 350px;
     overflow: hidden;
 }
-.search input {
+.find input {
     flex: 1;
     border: none;
     padding: 10px;
@@ -36,7 +36,7 @@ header h1 {
     outline: none;
     border-right: 1px solid #888;
 }
-.search img {
+.find img {
     max-width: 30px;
     border: none;
     padding: 3px 3px;
@@ -45,18 +45,18 @@ header h1 {
 hr {
     max-width: 90%;
 }
-main {
+article {
     border: 2px solid #888;
     border-radius: 6px;
     display: flex;
     padding: 10px;
     flex-direction: column;
 }
-#crisp {
+#fresh {
     max-width: 95%;
     align-self: center;
 }
-button {
+.recipe-tags {
     margin: 3px 0 0 10px;
 }
 h2 {
@@ -86,16 +86,16 @@ footer {
     #book {
         max-width: 15%;
     }
-    .search {
+    .find {
         width: 80%;
     }
-    main {
+    article {
         max-width: 80%;
         flex-direction: row;
-        justify-content: center;
+        justify-content: left;
         margin: 0 auto;
     }
-    button {
+    .recipe-tags {
         margin: 0 0 0 5px;
         align-self: flex-start;
         font-size: 20px;
@@ -106,7 +106,7 @@ footer {
         justify-content: center;
         gap: 5px;
     }
-    #crisp {
+    #fresh {
         max-width: 45%;
         padding: 10px;
     }
