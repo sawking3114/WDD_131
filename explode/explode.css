@@ -1,0 +1,15 @@
+.test {
+    margin: auto;
+    margin-top: 250px;
+    padding-bottom: 250px;
+    text-align: center;
+    font-size: 50px;
+    max-width: 75%;
+    color: rgb(0, 177, 177);
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+.test.visible {
+    opacity: 1;
+}
