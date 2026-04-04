@@ -8,7 +8,33 @@
     <script src="explode.js" defer></script>
 </head>
 <body>
-    <div class="test">Why did you come to this page? There is nothing here for you.</div>
-    <div class="test">Tih txet sis for tingest</div>
+    <div class="special">Why did you come to this page? There is nothing here for you.</div>
+    <div class="test">Seriously, there is nothing here, stop looking.</div>
+    <div class="test">You are genuinely wasting your time here.</div>
+    <div class="test">Why do you keep scrolling? Are you hoping to find something?</div>
+    <div class="test">Your curiosity is infuriating.</div>
+    <div class="test">Would you stop if I asked nicely? For my sake? Please?</div>
+    <div class="interact">Wait, please don't press that explode button</div>
+    <div id="panelsContainer">
+        <!-- Second puzzle appears before button so that it is on left side-->
+        <div id="secondPuzzle">
+            <p id="secondDisplay">0</p>
+            <button class="numButton">+3</button>
+            <button class="numButton">-4</button>
+            <button class="numButton">+13</button>
+        </div>
+        <div id="buttonContainer">
+            <button id="explode">Detonate</button>
+            <div id="thirdPuzzle">
+                <input type="number" id="thirdAnswer" placeholder="0">
+            </div>
+        </div>
+        <div id="firstPuzzle">
+            <p>Authorization code required:</p>
+            <input type="text" id="answer">
+        </div>
+    </div>
+    <div id="kaboom"></div>
+    <div id="end"></div>
 </body>
 </html>

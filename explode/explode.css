@@ -1,15 +1,179 @@
-.test {
+.test, .interact, .special {
     margin: auto;
     margin-top: 250px;
-    padding-bottom: 250px;
+    padding-bottom: 300px;
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
     max-width: 75%;
     color: rgb(0, 177, 177);
     opacity: 0;
     transition: opacity 0.8s ease-out;
 }
 
-.test.visible {
+.test.visible, .interact.visible, .special.visible {
     opacity: 1;
+}
+
+#panelsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -200px;
+    margin-bottom: 300px;
+}
+
+#buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#explode {
+    width: 150px;
+    height: 50px;
+    color: white;
+    background-color: red;
+    border: 1px solid crimson;
+    border-radius: 15px;
+    font-size: 1.5em;
+}
+
+#explode:hover {
+    background-color: crimson;
+    color: lightgray;
+}
+
+#firstPuzzle, #secondPuzzle, #thirdPuzzle {
+    overflow: hidden;
+    white-space: nowrap;
+    pointer-events: none;
+
+    width: 190px;
+    height: 85px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    border: 1px solid crimson;
+    border-radius: 15px;
+}
+
+#firstPuzzle {
+    max-width: 0;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+#firstPuzzle.open, #secondPuzzle.open {
+    max-width: 190px;
+    opacity: 1;
+    transform: translateX(0);
+
+    pointer-events: auto;
+}
+
+#secondPuzzle {
+    max-width: 0;
+    opacity: 0;
+    transform: translateX(100%);
+    transition: all 0.3s ease;
+}
+
+#secondDisplay {
+    background-color: white;
+    color: black;
+}
+
+#thirdPuzzle {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.3s ease;
+}
+
+#thirdAnswer {
+    margin: 0 auto;
+    margin-top: 1%;
+    height: 90%;
+    background-color: white;
+    color: black;
+    border: none;
+}
+
+#thirdPuzzle.open {
+    max-height: 85px;
+    opacity: 1;
+    transform: translateY(0);
+
+    pointer-events: auto;
+}
+
+/* animation stuff for explosion */
+#kaboom {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, orange, red, transparent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    pointer-events: none;
+}
+/* forwards causes animation to not reset */
+#kaboom.active {
+    animation: explode 0.6s ease-out forwards;
+}
+/* causes the explosion to expand outward, scale determines its size */
+@keyframes explode {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    70% {
+        transform: translate(-50%, -50%) scale(100);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(200);
+        opacity: 0;
+    }
+}
+
+/* stuff for fading to black after explosion */
+#end {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    pointer-events: none;
+}
+#end.active {
+    animation: fadeToBlack 1s ease-out forwards;
+    pointer-events: auto;
+}
+@keyframes fadeToBlack {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    #panelsContainer {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .test, .interact, .special {
+        font-size: 50px;
+    }
 }
