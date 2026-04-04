@@ -112,7 +112,7 @@ function beginThirdPuzzle() {
     if (!thirdPuzzle.classList.contains("open")){
         thirdPuzzle.classList.add("open");
         talking.textContent = "That's it. You're never figuring out what number goes in this last one. Its the value for the blue and green that makes my text color. But this text box will give you no hints!";
-        special.textContent = "100 + the second answer twice";
+        special.textContent = "the second answer twice";
     }
 }
 
