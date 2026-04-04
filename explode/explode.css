@@ -126,7 +126,7 @@
 #kaboom.active {
     animation: explode 0.6s ease-out forwards;
 }
-/* causes the explosion to expand outward, scale determines its size */
+/* causes the explosion to expand outward, scale determines its size, opacity makes it dissapear as it goes off-screen, translate keeps it centered */
 @keyframes explode {
     0% {
         transform: translate(-50%, -50%) scale(0);
@@ -158,10 +158,10 @@
     pointer-events: auto;
 }
 @keyframes fadeToBlack {
-    from {
+    0% {
         opacity: 0;
     }
-    to {
+    100% {
         opacity: 1;
     }
 }
